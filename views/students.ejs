@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Page</title>
+  </head>
+  <script>
+    function deleteStudent(id) {
+      fetch(`/students/delete/${id}`, { method: 'DELETE' })
+    }
+  </script>
+  <body>
+    <ul>
+      <% data.forEach(student => { %>
+      <li><a href="/students/<%= student.id %>"><%= student.name %></a></li>
+      <button type="button" onclick="deleteStudent('<%= student.id %>')">
+        刪除
+      </button>
+      <% }) %>
+    </ul>
+
+    <a href="/students/insert">新增學生</a>
+  </body>
+</html>

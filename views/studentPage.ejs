@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>單一學生查詢</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Student ID</td>
+        <td><%= data.id %></td>
+      </tr>
+      <tr>
+        <td>FullName</td>
+        <td><%= data.name %></td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td><%= data.age %></td>
+      </tr>
+      <tr>
+        <td>Merit Scholarship</td>
+        <td><%= data.scholarship.merit %></td>
+      </tr>
+      <tr>
+        <td>Other Scholarship</td>
+        <td><%= data.scholarship.other %></td>
+      </tr>
+    </table>
+    <a href="/students/edit/<%= data.id %> ">編輯學生</a>
+    <br />
+    <a href="/students">Go Back to students page</a>
+  </body>
+</html>
