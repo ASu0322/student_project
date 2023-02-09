@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const uniqueValidator = require('mongoose-unique-validator')
 
 const studentSchema = new mongoose.Schema({
   id: {
@@ -26,6 +27,8 @@ const studentSchema = new mongoose.Schema({
     }
   }
 })
+
+studentSchema.plugin(uniqueValidator)
 
 const Student = mongoose.model('Student', studentSchema)
 
