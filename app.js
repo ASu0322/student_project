@@ -15,7 +15,7 @@ mongoose.set('strictQuery', false)
 // connect to mongoDB
 mongoose
   .connect(
-    'mongodb+srv://stanleysu:ysd392602@cluster0.8181ufr.mongodb.net/testDB?retryWrites=true&w=majority',
+    'mongodb+srv://stanleysu:我常用的那個@cluster0.8181ufr.mongodb.net/testDB?retryWrites=true&w=majority',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
